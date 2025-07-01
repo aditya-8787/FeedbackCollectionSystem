@@ -1,44 +1,106 @@
-# 📝 Feedback Collection System
 
-A responsive, secure, and customizable web application for collecting and managing user feedback across multiple platforms. Designed for versatility and ease of use, this platform supports real-time data handling, admin moderation, and actionable insights.
+# 📝 Feedback Collection System with Email Notifications
 
----
+A full-stack web application to collect, manage, and monitor user feedback with a focus on security, real-time submission, and admin tools.
 
 ## 🚀 Features
 
-### 💬 Feedback Submission
-- Customizable forms with support for multiple question types
-- Real-time submission with auto-saving
-- Anonymous or authenticated feedback options
-
-### 🔐 Secure & Scalable
-- Encrypted feedback storage
-- Secure user authentication and authorization
-- Data validation and error handling
-
-### 📊 Admin Tools
-- Feedback analytics dashboard with visual insights
-- Version control for dynamic form updates
-- Feedback history logs with moderation access
-- Export data to CSV or integrate via APIs
-
-### 📲 Multi-Device Ready
-- Responsive UI for desktop, tablet, and mobile devices
-- Accessible on all major browsers
+- ✅ Customizable and responsive feedback forms
+- 📧 Email notifications on feedback submission (via Nodemailer)
+- 🔒 Secure data handling with environment variables and encrypted MongoDB storage
+- 📊 Admin dashboard with feedback history, moderation tools, and analytics
+- 🔁 Export and integration support with third-party APIs
+- 🔐 Environment-based configuration via `.env` file
+- 🌐 Fully accessible across desktop, tablet, and mobile devices
 
 ---
 
-## 🛠 Tech Stack
+## 🧱 Tech Stack
 
-| Layer        | Technologies Used                                    |
-|--------------|-------------------------------------------------------|
-| Frontend     | HTML5, CSS3, EJS (or React if applicable), Bootstrap |
-| Backend      | Node.js, Express.js                                   |
-| Database     | MongoDB (managed via MongoDB Compass)                |
-| Tools        | VS Code, Postman, dotenv, Nodemailer (optional)      |
-| Other        | JWT/Auth Middleware, REST API, Export Tools           |
+| Layer | Technology |
+|-------|------------|
+| Language | JavaScript (Node.js) |
+| Backend Framework | Express.js |
+| Frontend Template Engine | EJS |
+| Database | MongoDB (via Mongoose) |
+| Email | Nodemailer |
+| Environment Management | dotenv |
+| IDE / Tools | VS Code, MongoDB Compass |
 
 ---
 
-## 📁 Folder Structure (Basic)
+## 📁 Project Structure
 
+```
+├── models/
+│   └── Feedback.js
+├── routes/
+│   └── feedback.js
+├── utils/
+│   ├── db.js
+│   └── emailService.js
+├── views/
+│   └── index.ejs
+│   └── admin.ejs
+├── public/
+│   └── styles.css
+├── .env.example
+├── .gitignore
+├── index.js
+├── package.json
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/aditya-8787/FeedbackCollectionSystem.git
+cd feedback-collection-with-email-notification
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+
+## 📬 Feedback Notification via Email
+
+When a user submits feedback, the system sends an email to the admin using **Nodemailer**. Make sure to configure `EMAIL_USER` and `EMAIL_PASS` correctly in `.env`.
+
+---
+
+## 📈 Admin Dashboard
+
+The `/admin` route provides access to:
+- Feedback history
+- Search/sort feedback
+- Moderation tools
+- Analytics (optional or in-progress)
+
+---
+
+## 🧪 Testing (Manual)
+
+To test:
+- Submit feedback from the form
+- Check email notification (to configured address)
+- View feedback entries on admin dashboard
+
+---
+
+## 📄 License
+
+This project is licensed under the **ISC License**. Feel free to fork and use for educational purposes.
+
+---
+
+## 🙋‍♂️ Author
+
+Made by [Aditya Singh] — feel free to connect!
+
+- GitHub: [@aditya-8787](https://github.com/aditya-8787)
+- LinkedIn: [Aditya Singh](https://www.linkedin.com/in/aditya8787/)
