@@ -104,3 +104,5 @@ Made by [Aditya Singh] — feel free to connect!
 
 - GitHub: [@aditya-8787](https://github.com/aditya-8787)
 - LinkedIn: [Aditya Singh](https://www.linkedin.com/in/aditya8787/)
+
+🔄 Deployment in Progress: The live version of this project is currently being finalized and will be available soon.
